@@ -18,6 +18,7 @@ import {PromiseExampleComponent} from './promise-example/promise-example.compone
 import {WrapperComponent} from './spinner/wrapper.component';
 import {StateFilterComponent} from './state-filter/state-filter.component';
 import {ObservableSubscribeComponent} from './observable-subscribe/observable-subscribe.component';
+import {ObservableUnsubscribeComponent} from './observable-unsubscribe/observable-unsubscribe.component';
 
 const appRoutes: Routes = [
   {
@@ -26,6 +27,8 @@ const appRoutes: Routes = [
     path: 'observable-example', component: ObservableExampleComponent
   }, {
     path: 'observable-subscribe', component: ObservableSubscribeComponent
+  }, {
+    path: 'observable-unsubscribe', component: ObservableUnsubscribeComponent
   }, {
     path: 'subject-example', component: SubjectExampleComponent
   }, {
