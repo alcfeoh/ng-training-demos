@@ -17,12 +17,15 @@ import {SubjectExampleComponent} from './subject-example/subject-example.compone
 import {PromiseExampleComponent} from './promise-example/promise-example.component';
 import {WrapperComponent} from './spinner/wrapper.component';
 import {StateFilterComponent} from './state-filter/state-filter.component';
+import {ObservableSubscribeComponent} from './observable-subscribe/observable-subscribe.component';
 
 const appRoutes: Routes = [
   {
     path: '', component: MenuComponent
   }, {
     path: 'observable-example', component: ObservableExampleComponent
+  }, {
+    path: 'observable-subscribe', component: ObservableSubscribeComponent
   }, {
     path: 'subject-example', component: SubjectExampleComponent
   }, {

@@ -25,6 +25,7 @@ import { WrapperComponent } from './spinner/wrapper.component';
 import {MessageComponent} from './two-way-data-binding-example/message.component';
 import { StateFilterComponent } from './state-filter/state-filter.component';
 import {HttpClientModule} from '@angular/common/http';
+import { ObservableSubscribeComponent } from './observable-subscribe/observable-subscribe.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,7 @@ import {HttpClientModule} from '@angular/common/http';
     TemplateDrivenFormComponent, ReactiveFormComponent, CreditCardValidatorDirective,
     HidingComponent, ModelComponent,
     NgforComponent, NgClassComponent, NgSwitchComponent,
-    PromiseExampleComponent, SubjectExampleComponent, SpinnerComponent, WrapperComponent, StateFilterComponent
+    PromiseExampleComponent, SubjectExampleComponent, SpinnerComponent, WrapperComponent, StateFilterComponent, ObservableSubscribeComponent
   ],
   imports: [
     BrowserModule,
