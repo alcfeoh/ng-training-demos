@@ -19,6 +19,7 @@ import {WrapperComponent} from './spinner/wrapper.component';
 import {StateFilterComponent} from './state-filter/state-filter.component';
 import {ObservableSubscribeComponent} from './observable-subscribe/observable-subscribe.component';
 import {ObservableUnsubscribeComponent} from './observable-unsubscribe/observable-unsubscribe.component';
+import {ObservableOperatorComponent} from './observable-operator/observable-operator.component';
 
 const appRoutes: Routes = [
   {
@@ -29,6 +30,8 @@ const appRoutes: Routes = [
     path: 'observable-subscribe', component: ObservableSubscribeComponent
   }, {
     path: 'observable-unsubscribe', component: ObservableUnsubscribeComponent
+  }, {
+    path: 'observable-operators', component: ObservableOperatorComponent
   }, {
     path: 'subject-example', component: SubjectExampleComponent
   }, {

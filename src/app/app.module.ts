@@ -27,6 +27,7 @@ import { StateFilterComponent } from './state-filter/state-filter.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ObservableSubscribeComponent } from './observable-subscribe/observable-subscribe.component';
 import { ObservableUnsubscribeComponent } from './observable-unsubscribe/observable-unsubscribe.component';
+import { ObservableOperatorComponent } from './observable-operator/observable-operator.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { ObservableUnsubscribeComponent } from './observable-unsubscribe/observa
     HidingComponent, ModelComponent,
     NgforComponent, NgClassComponent, NgSwitchComponent,
     PromiseExampleComponent, SubjectExampleComponent, SpinnerComponent, WrapperComponent, StateFilterComponent,
-    ObservableSubscribeComponent, ObservableUnsubscribeComponent
+    ObservableSubscribeComponent, ObservableUnsubscribeComponent, ObservableOperatorComponent
   ],
   imports: [
     BrowserModule,
