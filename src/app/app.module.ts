@@ -29,6 +29,8 @@ import { ObservableSubscribeComponent } from './observable-subscribe/observable-
 import { ObservableUnsubscribeComponent } from './observable-unsubscribe/observable-unsubscribe.component';
 import { ObservableOperatorComponent } from './observable-operator/observable-operator.component';
 import { ObservableOperatorsComponent } from './observable-operators/observable-operators.component';
+import { Component1Component } from './subject-example/component1/component1.component';
+import { Component2Component } from './subject-example/component2/component2.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +43,7 @@ import { ObservableOperatorsComponent } from './observable-operators/observable-
     HidingComponent, ModelComponent,
     NgforComponent, NgClassComponent, NgSwitchComponent,
     PromiseExampleComponent, SubjectExampleComponent, SpinnerComponent, WrapperComponent, StateFilterComponent,
-    ObservableSubscribeComponent, ObservableUnsubscribeComponent, ObservableOperatorComponent, ObservableOperatorsComponent
+    ObservableSubscribeComponent, ObservableUnsubscribeComponent, ObservableOperatorComponent, ObservableOperatorsComponent, Component1Component, Component2Component
   ],
   imports: [
     BrowserModule,

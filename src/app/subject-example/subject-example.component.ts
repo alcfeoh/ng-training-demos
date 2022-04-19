@@ -4,7 +4,7 @@ import {Subject} from 'rxjs';
 
 @Component({
   selector: 'app-subject-example',
-  template: ``
+  templateUrl: './subject-example.component.html'
 })
 export class SubjectExampleComponent {
 
