@@ -28,6 +28,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { ObservableSubscribeComponent } from './observable-subscribe/observable-subscribe.component';
 import { ObservableUnsubscribeComponent } from './observable-unsubscribe/observable-unsubscribe.component';
 import { ObservableOperatorComponent } from './observable-operator/observable-operator.component';
+import { ObservableOperatorsComponent } from './observable-operators/observable-operators.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { ObservableOperatorComponent } from './observable-operator/observable-op
     HidingComponent, ModelComponent,
     NgforComponent, NgClassComponent, NgSwitchComponent,
     PromiseExampleComponent, SubjectExampleComponent, SpinnerComponent, WrapperComponent, StateFilterComponent,
-    ObservableSubscribeComponent, ObservableUnsubscribeComponent, ObservableOperatorComponent
+    ObservableSubscribeComponent, ObservableUnsubscribeComponent, ObservableOperatorComponent, ObservableOperatorsComponent
   ],
   imports: [
     BrowserModule,
