@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Country} from '../../countries';
 import {CountryService} from '../country.service';
 
@@ -9,10 +9,15 @@ import {CountryService} from '../country.service';
 })
 export class Component2Component  {
 
+  @Input() index;
+
   currentCountry: Country;
 
   constructor(private countryService: CountryService) {
-    countryService.getCurrentCountry().subscribe(c => this.currentCountry = c);
+    countryService.getCurrentCountry().subscribe(c => {
+      console.log(`CARD ${this.index} received ${c.name}`);
+      this.currentCountry = c;
+    });
   }
 
 }

@@ -984,4 +984,6 @@ const countries = [
   }
 ];
 
+export const FRANCE: Country = countries[72];
+
 export const countryList$: Observable<Country[]> = of(countries);
