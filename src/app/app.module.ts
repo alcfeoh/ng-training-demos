@@ -31,6 +31,7 @@ import { ObservableOperatorComponent } from './observable-operator/observable-op
 import { ObservableOperatorsComponent } from './observable-operators/observable-operators.component';
 import { Component1Component } from './subject-example/component1/component1.component';
 import { Component2Component } from './subject-example/component2/component2.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,7 @@ import { Component2Component } from './subject-example/component2/component2.com
     HidingComponent, ModelComponent,
     NgforComponent, NgClassComponent, NgSwitchComponent,
     PromiseExampleComponent, SubjectExampleComponent, SpinnerComponent, WrapperComponent, StateFilterComponent,
-    ObservableSubscribeComponent, ObservableUnsubscribeComponent, ObservableOperatorComponent, ObservableOperatorsComponent, Component1Component, Component2Component
+    ObservableSubscribeComponent, ObservableUnsubscribeComponent, ObservableOperatorComponent, ObservableOperatorsComponent, Component1Component, Component2Component, DialogComponent
   ],
   imports: [
     BrowserModule,

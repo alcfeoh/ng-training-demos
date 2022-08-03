@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  showDialog = false;
 
-  ngOnInit() {
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  dialogClosed(event: string): void {
+    console.log(event);
+    this.showDialog = false;
   }
-
 }

@@ -9,6 +9,14 @@
       <a rel="noopener" routerLink="ngmodel">ngModel example</a> -
       <a rel="noopener" routerLink="2-way-data-binding">Custom two-way data binding</a>
     </h3>
+    <button (click)="showDialog = true">Show dialog</button>
+    <app-dialog
+      [isOpen]="showDialog"
+      title="Test dialog"
+      (onClose)="dialogClosed($event)"
+    >
+      This is the content of the dialog
+    </app-dialog>
   </li>
   <li>
     <h3>Directive examples: <a rel="noopener" routerLink="ngfor">*ngFor</a> -
