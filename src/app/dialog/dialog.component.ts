@@ -16,6 +16,10 @@ export class DialogComponent implements OnInit, OnChanges {
   @Output()
   onClose = new EventEmitter<string>();
 
+  constructor() {
+    console.log('CONSTRUCTOR');
+  }
+
   closePopup(): void {
     this.isOpen = false;
     this.onClose.emit('Dialog closed');
