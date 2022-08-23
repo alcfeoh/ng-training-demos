@@ -13,7 +13,7 @@ export class ReactiveFormComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
       firstname: ['', Validators.required],
       lastname: '',
@@ -21,10 +21,14 @@ export class ReactiveFormComponent implements OnInit {
       zip: ['', [Validators.required, Validators.pattern('[0-9]{5}')]],
       city: '',
       cc: ['', [Validators.required, CreditCardValidatorDirective.validateCcNumber] ]
-    })
+    });
+
+    this.registerForm.controls.zip.valueChanges.subscribe(newValue => console.log(newValue));
+
+    this.registerForm.controls.zip.statusChanges.subscribe(newStatus => console.log(newStatus));
   }
 
-  logForm() {
+  logForm(): void {
     console.log(this.registerForm.value);
   }
 }
