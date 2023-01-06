@@ -8,7 +8,7 @@ import {FormControl} from '@angular/forms';
 })
 export class ObservableSubscribeComponent {
 
-  continentSelect = new FormControl();
+  continentSelect = new FormControl<string>('');
   currentSelection: string;
 
   constructor() {
