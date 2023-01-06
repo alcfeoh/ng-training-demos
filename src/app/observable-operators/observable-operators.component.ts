@@ -11,8 +11,8 @@ import {combineLatest} from 'rxjs';
 })
 export class ObservableOperatorsComponent {
 
-  continentSelect = new FormControl();
-  countrySelect = new FormControl();
+  continentSelect = new FormControl<string>('');
+  countrySelect = new FormControl<string>('');
   currentSelection: string;
   displayedCountries: Country[] = [];
 

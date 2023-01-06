@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators} from "@angular/forms";
+import {AbstractControl, UntypedFormBuilder, UntypedFormGroup, ValidationErrors, Validators} from "@angular/forms";
 import {CreditCardValidatorDirective} from './credit-card-validator.directive';
 
 @Component({
@@ -9,9 +9,9 @@ import {CreditCardValidatorDirective} from './credit-card-validator.directive';
 })
 export class ReactiveFormComponent implements OnInit {
 
-  registerForm: FormGroup;
+  registerForm: UntypedFormGroup;
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: UntypedFormBuilder) {}
 
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({

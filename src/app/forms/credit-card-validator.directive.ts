@@ -1,5 +1,5 @@
 import { Directive } from '@angular/core';
-import {FormControl, NG_VALIDATORS, ValidationErrors, Validator} from '@angular/forms';
+import {UntypedFormControl, NG_VALIDATORS, ValidationErrors, Validator} from '@angular/forms';
 
 @Directive({
   selector: '[appCreditCardValidator]',
@@ -11,11 +11,11 @@ export class CreditCardValidatorDirective implements Validator{
 
   constructor() { }
 
-  validate(c: FormControl): ValidationErrors {
+  validate(c: UntypedFormControl): ValidationErrors {
     return CreditCardValidatorDirective.validateCcNumber(c);
   }
 
-  static validateCcNumber(control: FormControl): ValidationErrors {
+  static validateCcNumber(control: UntypedFormControl): ValidationErrors {
     if (control.value){
       if ( ! (control.value.startsWith('37')
         || control.value.startsWith('4')

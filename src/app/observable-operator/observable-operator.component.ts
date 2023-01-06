@@ -9,7 +9,7 @@ import {map} from 'rxjs/operators';
 })
 export class ObservableOperatorComponent {
 
-  continentSelect = new FormControl();
+  continentSelect = new FormControl<string>('');
   currentSelection: string;
 
   constructor() {
