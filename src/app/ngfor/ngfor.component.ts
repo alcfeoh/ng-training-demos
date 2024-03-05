@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
+import {NgForOf} from '@angular/common';
 
 @Component({
   selector: 'app-ngfor',
-  template: ` 
-      <ul>
-        <li *ngFor="let person of persons">
-          {{ getDisplayName(person)  }}
-        </li>
-      </ul>`
+  standalone: true,
+  imports: [
+    NgForOf
+  ],
+  template: `
+    <ul>
+      <li *ngFor="let person of persons">
+        {{ getDisplayName(person) }}
+      </li>
+    </ul>`
 })
 export class NgforComponent {
 
@@ -68,7 +73,7 @@ export class NgforComponent {
     }
   ];
 
-  getDisplayName(person) {
+  getDisplayName(person: any) {
     return person.name + " - Employer: " + person.company;
   }
 

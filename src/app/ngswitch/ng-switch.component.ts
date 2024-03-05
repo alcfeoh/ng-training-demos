@@ -1,7 +1,14 @@
 import { Component } from '@angular/core';
+import {NgSwitch, NgSwitchCase, NgSwitchDefault} from '@angular/common';
 
 @Component({
   selector: 'app-ngswitch',
+  standalone: true,
+  imports: [
+    NgSwitch,
+    NgSwitchCase,
+    NgSwitchDefault
+  ],
   template: `
     <div [ngSwitch]="page">
       <p *ngSwitchCase="1">Viewing content of first page</p>
@@ -18,6 +25,6 @@ import { Component } from '@angular/core';
 })
 export class NgSwitchComponent {
 
-  page = null;
+  page = 0;
 
 }

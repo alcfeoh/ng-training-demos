@@ -1,17 +1,22 @@
 import { Component } from '@angular/core';
 import {Observable} from "rxjs";
+import {NgForOf} from '@angular/common';
 
 @Component({
   selector: 'app-observable-example',
+  standalone: true,
+  imports: [
+    NgForOf
+  ],
   template: `
     <ul>
-      <li *ngFor="let message of messages">{{message}}</li>
+      <li *ngFor="let message of messages">{{ message }}</li>
     </ul>
   `
 })
 export class ObservableExampleComponent {
 
-  messages = [];
+  messages: string[] = [];
 
   constructor() {
       this.messages.push("Creating observable");
@@ -27,7 +32,7 @@ export class ObservableExampleComponent {
       observable.subscribe((data) => {
         this.messages.push("Got data from the observable >>>>> "+ data);
       });
-      
+
       this.messages.push("Observable.subscribe called");
   }
 }

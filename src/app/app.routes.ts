@@ -1,28 +1,27 @@
-import { ModuleWithProviders }  from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-
-import {ListPostsComponent} from './observable-example/list-posts/list-posts.component';
-import {TwoWayDataBindingExampleComponent} from './two-way-data-binding-example/two-way-data-binding-example.component';
-import {BindingsComponent} from './bindings';
+import { Routes } from '@angular/router';
 import {MenuComponent} from './menu/menu.component';
-import {TemplateDrivenFormComponent} from './forms/template-driven-form.component';
-import {ReactiveFormComponent} from './forms/reactive-form.component';
-import {HidingComponent} from './hiding/hiding.component';
-import {ModelComponent} from './model/model.component';
 import {ObservableExampleComponent} from './observable-example/observable-example.component';
-import {NgforComponent} from './ngfor/ngfor.component';
-import {NgClassComponent} from './ngclass/ng-class.component';
-import {NgSwitchComponent} from './ngswitch/ng-switch.component';
-import {SubjectExampleComponent} from './subject-example/subject-example.component';
-import {PromiseExampleComponent} from './promise-example/promise-example.component';
-import {WrapperComponent} from './spinner/wrapper.component';
-import {StateFilterComponent} from './state-filter/state-filter.component';
 import {ObservableSubscribeComponent} from './observable-subscribe/observable-subscribe.component';
 import {ObservableUnsubscribeComponent} from './observable-unsubscribe/observable-unsubscribe.component';
 import {ObservableOperatorComponent} from './observable-operator/observable-operator.component';
 import {ObservableOperatorsComponent} from './observable-operators/observable-operators.component';
+import {SubjectExampleComponent} from './subject-example/subject-example.component';
+import {PromiseExampleComponent} from './promise-example/promise-example.component';
+import {ListPostsComponent} from './observable-example/list-posts/list-posts.component';
+import {TwoWayDataBindingExampleComponent} from './two-way-data-binding-example/two-way-data-binding-example.component';
+import {TemplateDrivenFormComponent} from './forms/template-driven-form.component';
+import {ReactiveFormComponent} from './forms/reactive-form.component';
+import {HidingComponent} from './hiding/hiding.component';
+import {ModelComponent} from './model/model.component';
+import {NgforComponent} from './ngfor/ngfor.component';
+import {NgClassComponent} from './ngclass/ng-class.component';
+import {NgSwitchComponent} from './ngswitch/ng-switch.component';
+import {WrapperComponent} from './spinner/wrapper.component';
+import {StateFilterComponent} from './state-filter/state-filter.component';
+import {BindingsComponent} from './bindings/bindings.component';
 
-const appRoutes: Routes = [
+
+export const routes: Routes = [
   {
     path: '', component: MenuComponent
   }, {
@@ -65,4 +64,3 @@ const appRoutes: Routes = [
     path: 'state-filter', component: StateFilterComponent
   }
 ];
-export const routing: ModuleWithProviders<RouterModule> = RouterModule.forRoot(appRoutes);

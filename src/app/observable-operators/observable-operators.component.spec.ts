@@ -8,8 +8,8 @@ describe('ObservableOperatorsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ObservableOperatorsComponent ]
-    })
+    declarations: [ObservableOperatorsComponent]
+})
     .compileComponents();
   });
 

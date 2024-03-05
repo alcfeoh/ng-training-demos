@@ -5,13 +5,14 @@ import {CountryService} from '../country.service';
 @Component({
   selector: 'app-component2',
   templateUrl: './component2.component.html',
+  standalone: true,
   styleUrls: ['./component2.component.css']
 })
 export class Component2Component  {
 
-  @Input() index;
+  @Input() index?: number;
 
-  currentCountry: Country;
+  currentCountry?: Country;
 
   constructor(private countryService: CountryService) {
     countryService.getCurrentCountry().subscribe(c => {
