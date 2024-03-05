@@ -1,16 +1,20 @@
 import { Component } from '@angular/core';
-import {FormControl} from '@angular/forms';
+import {FormControl, ReactiveFormsModule} from '@angular/forms';
 import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-observable-unsubscribe',
   templateUrl: './observable-unsubscribe.component.html',
+  standalone: true,
+  imports: [
+    ReactiveFormsModule
+  ],
   styleUrls: ['./observable-unsubscribe.component.css']
 })
 export class ObservableUnsubscribeComponent {
 
   continentSelect = new FormControl();
-  currentSelection: string;
+  currentSelection?: string;
   subscription: Subscription;
 
   constructor() {

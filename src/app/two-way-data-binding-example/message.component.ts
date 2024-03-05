@@ -1,14 +1,19 @@
 import {Component, Input, EventEmitter, Output} from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-message',
-  template: `    
-      <input type="text" [(ngModel)]="message">
+  standalone: true,
+  imports: [
+    FormsModule
+  ],
+  template: `
+    <input type="text" [(ngModel)]="message">
   `
 })
 export class MessageComponent  {
 
-  messageValue: string;
+  messageValue?: string;
 
   @Output()
   messageChange = new EventEmitter<string>();
