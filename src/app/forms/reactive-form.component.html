@@ -19,7 +19,7 @@
   <br/>
   <label>Zip:</label>
   <input type="text" name="zip" formControlName="zip">
-  <div class="alert" *ngIf=" !registerForm.controls.zip.pristine && registerForm.controls.zip.errors">
+  <div class="alert" *ngIf=" !registerForm.controls['zip'].pristine && registerForm.controls['zip'].errors">
     Zipcode must have 5 digits
   </div>
   <br/>
@@ -28,8 +28,8 @@
   <br/>
   <label>Credit card:</label>
   <input type="password" name="cc" formControlName="cc">
-  <div class="alert" *ngIf="registerForm.controls.cc.errors">
-    {{registerForm.controls.cc.errors['creditCard'] }}
+  <div class="alert" *ngIf="registerForm.controls['cc'].errors">
+    {{registerForm.controls['cc'].errors['creditCard'] }}
   </div>
   <br/>
   <button type="submit">Submit</button>
