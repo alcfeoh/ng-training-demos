@@ -8,8 +8,8 @@ describe('StateFilterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StateFilterComponent ]
-    })
+    declarations: [StateFilterComponent]
+})
     .compileComponents();
   }));
 

@@ -3,19 +3,20 @@ import {UntypedFormControl, NG_VALIDATORS, ValidationErrors, Validator} from '@a
 
 @Directive({
   selector: '[appCreditCardValidator]',
+  standalone: true,
   providers: [
-    { provide: NG_VALIDATORS, useExisting: CreditCardValidatorDirective, multi: true }
+    {provide: NG_VALIDATORS, useExisting: CreditCardValidatorDirective, multi: true}
   ]
 })
 export class CreditCardValidatorDirective implements Validator{
 
   constructor() { }
 
-  validate(c: UntypedFormControl): ValidationErrors {
+  validate(c: UntypedFormControl): ValidationErrors | null {
     return CreditCardValidatorDirective.validateCcNumber(c);
   }
 
-  static validateCcNumber(control: UntypedFormControl): ValidationErrors {
+  static validateCcNumber(control: UntypedFormControl): ValidationErrors | null {
     if (control.value){
       if ( ! (control.value.startsWith('37')
         || control.value.startsWith('4')
