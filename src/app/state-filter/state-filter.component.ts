@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {combineLatest, Observable} from 'rxjs';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import {ReactiveFormsModule, UntypedFormControl} from '@angular/forms';
 import {map, startWith} from 'rxjs/operators';
 import {AsyncPipe, NgForOf} from '@angular/common';
@@ -17,7 +17,7 @@ interface State {
   imports: [
     ReactiveFormsModule,
     AsyncPipe,
-    NgForOf, HttpClientModule
+    NgForOf
   ],
   styleUrls: ['./state-filter.component.css']
 })
