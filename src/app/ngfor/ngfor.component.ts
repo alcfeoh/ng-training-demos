@@ -12,7 +12,15 @@ import {NgForOf} from '@angular/common';
       <li *ngFor="let person of persons">
         {{ getDisplayName(person) }}
       </li>
-    </ul>`
+    </ul>
+    <ul>
+      @for(person of persons; track person._id) {
+        <li>
+          {{ getDisplayName(person) }}
+        </li>
+      }
+    </ul>
+  `
 })
 export class NgforComponent {
 
