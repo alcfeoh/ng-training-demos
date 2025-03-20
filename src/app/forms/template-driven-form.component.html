@@ -1,11 +1,26 @@
 <div>
   <span>Form state: </span>
-  <span class="badge badge-pill badge-info" *ngIf="form.touched">Touched</span>
-  <span class="badge badge-pill badge-warning" *ngIf="form.untouched">Untouched</span>
-  <span class="badge badge-pill badge-success" *ngIf="form.valid">Valid</span>
-  <span class="badge badge-pill badge-danger" *ngIf="form.invalid">Invalid</span>
-  <span class="badge badge-pill badge-primary" *ngIf="form.pristine">Pristine</span>
-  <span class="badge badge-pill badge-dark" *ngIf="form.dirty">Dirty</span>
+  <span>
+    @if(form.touched) {
+      Touched
+    } @else {
+      Untouched
+    }
+  </span>
+  <span>
+    @if(form.valid) {
+      Valid
+    } @else {
+      Invalid
+    }
+  </span>
+  <span>
+    @if(form.pristine) {
+      Pristine
+    } @else {
+      Dirty
+    }
+  </span>
 </div>
 <form #form="ngForm" (ngSubmit)="logForm(form.value)"  >
   <label>Firstname:</label>
