@@ -2,12 +2,11 @@ import {Component, Input, EventEmitter, Output} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 
 @Component({
-  selector: 'app-message',
-  standalone: true,
-  imports: [
-    FormsModule
-  ],
-  template: `
+    selector: 'app-message',
+    imports: [
+        FormsModule
+    ],
+    template: `
     <input type="text" [(ngModel)]="message">
   `
 })

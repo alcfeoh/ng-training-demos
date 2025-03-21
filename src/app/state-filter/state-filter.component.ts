@@ -11,15 +11,14 @@ interface State {
 }
 
 @Component({
-  selector: 'app-state-filter',
-  templateUrl: './state-filter.component.html',
-  standalone: true,
-  imports: [
-    ReactiveFormsModule,
-    AsyncPipe,
-    NgForOf
-  ],
-  styleUrls: ['./state-filter.component.css']
+    selector: 'app-state-filter',
+    templateUrl: './state-filter.component.html',
+    imports: [
+        ReactiveFormsModule,
+        AsyncPipe,
+        NgForOf
+    ],
+    styleUrls: ['./state-filter.component.css']
 })
 export class StateFilterComponent {
 

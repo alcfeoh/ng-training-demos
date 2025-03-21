@@ -6,14 +6,13 @@ import {combineLatest} from 'rxjs';
 import {NgForOf} from '@angular/common';
 
 @Component({
-  selector: 'app-observable-operators',
-  templateUrl: './observable-operators.component.html',
-  standalone: true,
-  imports: [
-    ReactiveFormsModule,
-    NgForOf
-  ],
-  styleUrls: ['./observable-operators.component.css']
+    selector: 'app-observable-operators',
+    templateUrl: './observable-operators.component.html',
+    imports: [
+        ReactiveFormsModule,
+        NgForOf
+    ],
+    styleUrls: ['./observable-operators.component.css']
 })
 export class ObservableOperatorsComponent {
 

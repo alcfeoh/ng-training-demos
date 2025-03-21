@@ -2,12 +2,11 @@ import { Component } from '@angular/core';
 import {NgForOf} from '@angular/common';
 
 @Component({
-  selector: 'app-ngfor',
-  standalone: true,
-  imports: [
-    NgForOf
-  ],
-  template: `
+    selector: 'app-ngfor',
+    imports: [
+        NgForOf
+    ],
+    template: `
     <ul>
       <li *ngFor="let person of persons">
         {{ getDisplayName(person) }}

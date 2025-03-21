@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-promise-example',
-  template: ``
+    selector: 'app-promise-example',
+    template: ``,
+    standalone: false
 })
 export class PromiseExampleComponent {
 

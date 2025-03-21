@@ -3,12 +3,11 @@ import {Observable} from "rxjs";
 import {NgForOf} from '@angular/common';
 
 @Component({
-  selector: 'app-observable-example',
-  standalone: true,
-  imports: [
-    NgForOf
-  ],
-  template: `
+    selector: 'app-observable-example',
+    imports: [
+        NgForOf
+    ],
+    template: `
     <ul>
       <li *ngFor="let message of messages">{{ message }}</li>
     </ul>

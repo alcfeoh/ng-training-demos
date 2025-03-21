@@ -5,14 +5,13 @@ import {map} from 'rxjs/operators';
 import {NgForOf, TitleCasePipe} from '@angular/common';
 
 @Component({
-  selector: 'app-list-posts',
-  templateUrl: './list-posts.component.html',
-  standalone: true,
-  imports: [
-    TitleCasePipe,
-    NgForOf
-  ],
-  styleUrls: ['./list-posts.component.css']
+    selector: 'app-list-posts',
+    templateUrl: './list-posts.component.html',
+    imports: [
+        TitleCasePipe,
+        NgForOf
+    ],
+    styleUrls: ['./list-posts.component.css']
 })
 export class ListPostsComponent {
 

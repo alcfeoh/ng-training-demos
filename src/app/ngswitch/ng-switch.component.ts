@@ -2,14 +2,13 @@ import { Component } from '@angular/core';
 import {NgSwitch, NgSwitchCase, NgSwitchDefault} from '@angular/common';
 
 @Component({
-  selector: 'app-ngswitch',
-  standalone: true,
-  imports: [
-    NgSwitch,
-    NgSwitchCase,
-    NgSwitchDefault
-  ],
-  template: `
+    selector: 'app-ngswitch',
+    imports: [
+        NgSwitch,
+        NgSwitchCase,
+        NgSwitchDefault
+    ],
+    template: `
     <div [ngSwitch]="page">
       <p *ngSwitchCase="1">Viewing content of first page</p>
       <p *ngSwitchCase="2">Viewing content of second page</p>

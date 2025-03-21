@@ -5,13 +5,12 @@ import {map} from 'rxjs/operators';
 import {NgForOf} from '@angular/common';
 
 @Component({
-  selector: 'app-component1',
-  templateUrl: './component1.component.html',
-  standalone: true,
-  imports: [
-    NgForOf
-  ],
-  styleUrls: ['./component1.component.css']
+    selector: 'app-component1',
+    templateUrl: './component1.component.html',
+    imports: [
+        NgForOf
+    ],
+    styleUrls: ['./component1.component.css']
 })
 export class Component1Component {
 

@@ -5,14 +5,13 @@ import {NgForOf} from '@angular/common';
 
 
 @Component({
-  selector: 'app-subject-example',
-  standalone: true,
-  imports: [
-    Component2Component,
-    Component1Component,
-    NgForOf
-  ],
-  templateUrl: './subject-example.component.html'
+    selector: 'app-subject-example',
+    imports: [
+        Component2Component,
+        Component1Component,
+        NgForOf
+    ],
+    templateUrl: './subject-example.component.html'
 })
 export class SubjectExampleComponent {
 

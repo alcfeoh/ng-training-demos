@@ -3,13 +3,12 @@ import {FormControl, ReactiveFormsModule} from '@angular/forms';
 import {map} from 'rxjs/operators';
 
 @Component({
-  selector: 'app-observable-operator',
-  templateUrl: './observable-operator.component.html',
-  standalone: true,
-  imports: [
-    ReactiveFormsModule
-  ],
-  styleUrls: ['./observable-operator.component.css']
+    selector: 'app-observable-operator',
+    templateUrl: './observable-operator.component.html',
+    imports: [
+        ReactiveFormsModule
+    ],
+    styleUrls: ['./observable-operator.component.css']
 })
 export class ObservableOperatorComponent {
 

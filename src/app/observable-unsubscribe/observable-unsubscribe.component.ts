@@ -3,13 +3,12 @@ import {FormControl, ReactiveFormsModule} from '@angular/forms';
 import {Subscription} from 'rxjs';
 
 @Component({
-  selector: 'app-observable-unsubscribe',
-  templateUrl: './observable-unsubscribe.component.html',
-  standalone: true,
-  imports: [
-    ReactiveFormsModule
-  ],
-  styleUrls: ['./observable-unsubscribe.component.css']
+    selector: 'app-observable-unsubscribe',
+    templateUrl: './observable-unsubscribe.component.html',
+    imports: [
+        ReactiveFormsModule
+    ],
+    styleUrls: ['./observable-unsubscribe.component.css']
 })
 export class ObservableUnsubscribeComponent {
 

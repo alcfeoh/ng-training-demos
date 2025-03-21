@@ -8,13 +8,12 @@ import {
 import {CreditCardValidatorDirective} from './credit-card-validator.directive';
 
 @Component({
-  selector: 'app-forms',
-  templateUrl: 'reactive-form.component.html',
-  standalone: true,
-  imports: [
-    ReactiveFormsModule
-  ],
-  styleUrls: ['template-driven-form.component.css']
+    selector: 'app-forms',
+    templateUrl: 'reactive-form.component.html',
+    imports: [
+        ReactiveFormsModule
+    ],
+    styleUrls: ['template-driven-form.component.css']
 })
 export class ReactiveFormComponent implements OnInit {
 

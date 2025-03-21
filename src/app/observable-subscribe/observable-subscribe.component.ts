@@ -2,13 +2,12 @@ import { Component } from '@angular/core';
 import {FormControl, ReactiveFormsModule} from '@angular/forms';
 
 @Component({
-  selector: 'app-observable-subscribe',
-  templateUrl: './observable-subscribe.component.html',
-  standalone: true,
-  imports: [
-    ReactiveFormsModule
-  ],
-  styleUrls: ['./observable-subscribe.component.css']
+    selector: 'app-observable-subscribe',
+    templateUrl: './observable-subscribe.component.html',
+    imports: [
+        ReactiveFormsModule
+    ],
+    styleUrls: ['./observable-subscribe.component.css']
 })
 export class ObservableSubscribeComponent {
 
