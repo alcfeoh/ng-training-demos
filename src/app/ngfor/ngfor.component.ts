@@ -1,17 +1,9 @@
 import { Component } from '@angular/core';
-import {NgForOf} from '@angular/common';
+
 
 @Component({
     selector: 'app-ngfor',
-    imports: [
-        NgForOf
-    ],
     template: `
-    <ul>
-      <li *ngFor="let person of persons">
-        {{ getDisplayName(person) }}
-      </li>
-    </ul>
     <ul>
       @for(person of persons; track person._id) {
         <li>
@@ -19,7 +11,7 @@ import {NgForOf} from '@angular/common';
         </li>
       }
     </ul>
-  `
+    `
 })
 export class NgforComponent {
 

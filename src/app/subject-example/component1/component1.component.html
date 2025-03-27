@@ -1,9 +1,11 @@
 <div>
-   <h2>Component 1</h2>
-   <h4>Select a country:</h4>
-  <button *ngFor="let country of countries"
-          (click)="countryService.setCurrentCountry(country)">
-    {{country.name}}
-  </button>
+  <h2>Component 1</h2>
+  <h4>Select a country:</h4>
+  @for (country of countries; track country) {
+    <button
+      (click)="countryService.setCurrentCountry(country)">
+      {{country.name}}
+    </button>
+  }
 
 </div>

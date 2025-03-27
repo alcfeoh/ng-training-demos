@@ -3,7 +3,7 @@ import {combineLatest, Observable} from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import {ReactiveFormsModule, UntypedFormControl} from '@angular/forms';
 import {map, startWith} from 'rxjs/operators';
-import {AsyncPipe, NgForOf} from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 
 interface State {
   abbreviation: string;
@@ -14,10 +14,9 @@ interface State {
     selector: 'app-state-filter',
     templateUrl: './state-filter.component.html',
     imports: [
-        ReactiveFormsModule,
-        AsyncPipe,
-        NgForOf
-    ],
+    ReactiveFormsModule,
+    AsyncPipe
+],
     styleUrls: ['./state-filter.component.css']
 })
 export class StateFilterComponent {

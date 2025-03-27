@@ -3,15 +3,14 @@ import {FormControl, ReactiveFormsModule} from '@angular/forms';
 import {tap, withLatestFrom} from 'rxjs/operators';
 import {Country, countryList$} from '../countries';
 import {combineLatest} from 'rxjs';
-import {NgForOf} from '@angular/common';
+
 
 @Component({
     selector: 'app-observable-operators',
     templateUrl: './observable-operators.component.html',
     imports: [
-        ReactiveFormsModule,
-        NgForOf
-    ],
+    ReactiveFormsModule
+],
     styleUrls: ['./observable-operators.component.css']
 })
 export class ObservableOperatorsComponent {

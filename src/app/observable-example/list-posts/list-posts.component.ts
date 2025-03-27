@@ -2,15 +2,14 @@ import {Component} from '@angular/core';
 import {Post} from './post';
 import {PostsService} from './posts.service';
 import {map} from 'rxjs/operators';
-import {NgForOf, TitleCasePipe} from '@angular/common';
+import { TitleCasePipe } from '@angular/common';
 
 @Component({
     selector: 'app-list-posts',
     templateUrl: './list-posts.component.html',
     imports: [
-        TitleCasePipe,
-        NgForOf
-    ],
+    TitleCasePipe
+],
     styleUrls: ['./list-posts.component.css']
 })
 export class ListPostsComponent {

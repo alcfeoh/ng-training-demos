@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import {Observable} from "rxjs";
-import {NgForOf} from '@angular/common';
+
 
 @Component({
     selector: 'app-observable-example',
-    imports: [
-        NgForOf
-    ],
+    imports: [],
     template: `
     <ul>
-      <li *ngFor="let message of messages">{{ message }}</li>
+      @for (message of messages; track message) {
+        <li>{{ message }}</li>
+      }
     </ul>
-  `
+    `
 })
 export class ObservableExampleComponent {
 

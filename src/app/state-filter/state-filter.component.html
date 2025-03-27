@@ -1,7 +1,9 @@
 <input type="text" [formControl]="filter" placeholder="Filter states...">
 
 <ul>
-  <li *ngFor="let state of filteredStates$ | async">{{state.name}}</li>
+  @for (state of filteredStates$ | async; track state.abbreviation) {
+    <li>{{state.name}}</li>
+  }
 </ul>
 
 

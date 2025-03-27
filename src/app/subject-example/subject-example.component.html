@@ -1,9 +1,10 @@
 <h3>A subject shares data between components</h3>
 <app-component1></app-component1>
 
-<app-component2 *ngFor="let card of cards; index as i" [index]="i + 1">
-
-</app-component2>
+@for (card of cards; track card) {
+  <app-component2 [index]="$index + 1">
+  </app-component2>
+}
 
 <br>&nbsp;<br>
 <button (click)="cards.push('')">Add another card component</button>
