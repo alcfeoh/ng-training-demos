@@ -19,12 +19,18 @@ import {NgSwitchComponent} from './ngswitch/ng-switch.component';
 import {WrapperComponent} from './spinner/wrapper.component';
 import {StateFilterComponent} from './state-filter/state-filter.component';
 import {BindingsComponent} from './bindings/bindings.component';
+import {SignalExampleComponent} from "./signal-examples/signal-example.component";
+import {ComputedEffectExampleComponent} from "./signal-examples/computed-effect-example.component";
 
 
 export const routes: Routes = [
   {
     path: '', component: MenuComponent
   }, {
+    path: 'signal-example', component: SignalExampleComponent
+  }, {
+    path: 'computed-effect-example', component: ComputedEffectExampleComponent
+  },{
     path: 'observable-example', component: ObservableExampleComponent
   }, {
     path: 'observable-subscribe', component: ObservableSubscribeComponent
