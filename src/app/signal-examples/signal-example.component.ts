@@ -10,6 +10,9 @@ import {Component, signal} from '@angular/core';
     <button (click)="name.set('EARTH')">
       Change text to EARTH
     </button>
+    <button (click)="name.update(text => text + '!')">
+      Append "!" to text
+    </button>
   `
 })
 export class SignalExampleComponent {
