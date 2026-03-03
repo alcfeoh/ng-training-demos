@@ -4,7 +4,6 @@ import {Component, computed, effect, signal} from '@angular/core';
   selector: 'app-computed-effect-example',
   template: `
     <h1>{{message()}}</h1>
-    <h1>{{getMessage()}}</h1>
     <button (click)="name.set('WORLD')">
       Change text to WORLD
     </button>
@@ -22,11 +21,6 @@ export class ComputedEffectExampleComponent {
   name = signal('Angular');
 
   message = computed(() => `${this.greeting()} ${this.name()}!`);
-
-  getMessage() {
-    console.log("getMessage() called");
-    return "HELLO WORD";
-  }
 
   constructor() {
     effect(() => console.log('Message changed to ' + this.message()));
