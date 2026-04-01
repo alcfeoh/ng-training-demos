@@ -19,8 +19,12 @@ import {NgSwitchComponent} from './ngswitch/ng-switch.component';
 import {WrapperComponent} from './spinner/wrapper.component';
 import {StateFilterComponent} from './state-filter/state-filter.component';
 import {BindingsComponent} from './bindings/bindings.component';
-import {SignalExampleComponent} from "./signal-examples/signal-example.component";
-import {ComputedEffectExampleComponent} from "./signal-examples/computed-effect-example.component";
+import { SignalExampleComponent } from "./signal-examples/signal-example.component";
+import { ComputedEffectExampleComponent } from "./signal-examples/computed-effect-example.component";
+import { TabsComponent } from './tabs/tabs.component';
+import { Tab1Component } from './tabs/tab1.component';
+import { Tab2Component } from './tabs/tab2.component';
+import { Tab3Component } from './tabs/tab3.component';
 
 
 export const routes: Routes = [
@@ -48,6 +52,15 @@ export const routes: Routes = [
     path: 'list-posts', component: ListPostsComponent
   }, {
     path: '2-way-data-binding', component: TwoWayDataBindingExampleComponent
+  }, {
+    path: 'tabs', 
+    component: TabsComponent,
+    children: [
+      { path: '', redirectTo: 'tab1', pathMatch: 'full' },
+      { path: 'tab1', component: Tab1Component },
+      { path: 'tab2', component: Tab2Component },
+      { path: 'tab3', component: Tab3Component }
+    ]
   }, {
     path: 'bindings', component: BindingsComponent
   }, {

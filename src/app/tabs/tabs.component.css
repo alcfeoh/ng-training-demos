@@ -1,0 +1,39 @@
+.tabs-container {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.tabs {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 2px solid lightgray;
+}
+
+.tabs a {
+  padding: 1rem 2rem;
+  border: 1px solid lightgray;
+  border-bottom: none;
+  background-color: whitesmoke;
+  cursor: pointer;
+  border-radius: 5px 5px 0 0;
+  text-decoration: none;
+  color: black;
+  margin-right: 2px;
+}
+
+.tabs a.active {
+  background-color: white;
+  border-bottom: 2px solid white;
+  margin-bottom: -2px;
+  font-weight: bold;
+}
+
+.tab-content {
+  padding: 1rem;
+  border: 1px solid lightgray;
+  border-top: none;
+}
