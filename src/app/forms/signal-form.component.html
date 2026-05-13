@@ -1,0 +1,61 @@
+<div>
+  <span>Form state: </span>
+  <span>
+    @if(userForm().touched()) {
+      Touched
+    } @else {
+      Untouched
+    }
+  </span>
+  <span>
+    @if(userForm().valid()) {
+      Valid
+    } @else {
+      Invalid
+    }
+  </span>
+  <span>
+    @if(userForm().dirty()) {
+      Dirty
+    } @else {
+      Pristine
+    }
+  </span>
+</div>
+<form  >
+  <label>Firstname:</label>
+  <input type="text" [formField]="userForm.firstName">
+  <br/>
+  <label>Lastname:</label>
+  <input type="text" [formField]="userForm.lastName">
+  <br/>
+  <label>Street:</label>
+  <input type="text" [formField]="userForm.street">
+  <br/>
+  <label>Zip:</label>
+  @if(userForm.zip().invalid() && userForm.zip().dirty()) {
+    <div class="alert">Please enter a 5-digit zipcode</div>
+  }
+  <input type="text" [formField]="userForm.zip" >
+  <br/>
+  <label>City:</label>
+  <input type="text" >
+  <br/>
+  <label>Credit card:</label>
+  @if(userForm.cc().invalid()) {
+    <div class="alert">
+      <p>{{userForm.cc().errors()[0].message}}</p>
+    </div>
+  }
+  <input type="password" [formField]="userForm.cc">
+  <br/>
+  <button (click)="logForm($event)">
+    Submit
+  </button>
+</form>
+
+<pre>
+  {{ userForm().value() | json }}
+</pre>
+
+

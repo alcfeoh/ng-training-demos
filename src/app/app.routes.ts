@@ -11,6 +11,7 @@ import {ListPostsComponent} from './observable-example/list-posts/list-posts.com
 import {TwoWayDataBindingExampleComponent} from './two-way-data-binding-example/two-way-data-binding-example.component';
 import {TemplateDrivenFormComponent} from './forms/template-driven-form.component';
 import {ReactiveFormComponent} from './forms/reactive-form.component';
+import {SignalFormComponent} from './forms/signal-form.component';
 import {HidingComponent} from './hiding/hiding.component';
 import {ModelComponent} from './model/model.component';
 import {NgforComponent} from './ngfor/ngfor.component';
@@ -53,7 +54,7 @@ export const routes: Routes = [
   }, {
     path: '2-way-data-binding', component: TwoWayDataBindingExampleComponent
   }, {
-    path: 'tabs', 
+    path: 'tabs',
     component: TabsComponent,
     children: [
       { path: '', redirectTo: 'tab1', pathMatch: 'full' },
@@ -67,6 +68,8 @@ export const routes: Routes = [
     path: 'template-driven-form', component: TemplateDrivenFormComponent
   }, {
     path: 'reactive-form', component: ReactiveFormComponent
+  }, {
+    path: 'signal-form', component: SignalFormComponent
   }, {
     path: 'ngif', component: HidingComponent
   }, {
