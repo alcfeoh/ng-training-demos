@@ -1,6 +1,7 @@
 import {Component, signal} from '@angular/core';
 import {form, FormField, maxLength, minLength, pattern, required} from "@angular/forms/signals";
 import {JsonPipe} from "@angular/common";
+import {validateCreditCardNumber} from "./credit-card-validator";
 
 @Component({
   selector: 'app-signal-form',
@@ -25,9 +26,7 @@ export class SignalFormComponent {
     required(path.firstName, {message: 'First name is required'});
     required(path.zip);
     pattern(path.zip, new RegExp("[0-9]{5}"), {message: 'Zipcode must be 5-digit long'});
-    required(path.cc, {message: 'A credit card number is required'});
-    minLength(path.cc, 16, {message: 'A credit card number must be 16-digit long'});
-    maxLength(path.cc, 16, {message: 'A credit card number must be 16-digit long'});
+    validateCreditCardNumber(path.cc)
   });
 
   logForm(event: Event) {
