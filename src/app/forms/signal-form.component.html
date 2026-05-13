@@ -22,7 +22,7 @@
     }
   </span>
 </div>
-<form  >
+<form [formRoot]="userForm">
   <label>Firstname:</label>
   <input type="text" [formField]="userForm.firstName">
   <br/>
@@ -49,7 +49,7 @@
   }
   <input type="password" [formField]="userForm.cc">
   <br/>
-  <button (click)="logForm($event)">
+  <button type="submit">
     Submit
   </button>
 </form>
