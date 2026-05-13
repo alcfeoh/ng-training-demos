@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, inject, OnInit} from '@angular/core';
 import {
   ReactiveFormsModule,
   UntypedFormBuilder,
@@ -17,12 +17,12 @@ import {CreditCardValidatorDirective} from './credit-card-validator.directive';
 })
 export class ReactiveFormComponent implements OnInit {
 
-  registerForm!: UntypedFormGroup;
+  userForm!: UntypedFormGroup;
 
-  constructor(private formBuilder: UntypedFormBuilder) {}
+  formBuilder = inject(UntypedFormBuilder);
 
   ngOnInit(): void {
-    this.registerForm = this.formBuilder.group({
+    this.userForm = this.formBuilder.group({
       firstname: ['', Validators.required],
       lastname: '',
       street: '',
@@ -31,14 +31,15 @@ export class ReactiveFormComponent implements OnInit {
       cc: ['', [Validators.required, CreditCardValidatorDirective.validateCcNumber] ]
     });
 
-    this.registerForm.controls['zip'].valueChanges
+    this.userForm.controls['zip'].valueChanges
       .subscribe(newValue => console.log(newValue));
 
-    this.registerForm.controls['zip'].statusChanges
+    this.userForm.controls['zip'].statusChanges
       .subscribe(newStatus => console.log(newStatus));
   }
 
   logForm(): void {
-    console.log(this.registerForm.value);
+    console.log(this.userForm.value);
+    console.log(this.userForm.value);
   }
 }

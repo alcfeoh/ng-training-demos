@@ -1,28 +1,28 @@
 <div>
   <span>Form state: </span>
   <span>
-    @if(registerForm.touched) {
+    @if(userForm.touched) {
       Touched
     } @else {
       Untouched
     }
   </span>
   <span>
-    @if(registerForm.valid) {
+    @if(userForm.valid) {
       Valid
     } @else {
       Invalid
     }
   </span>
   <span>
-    @if(registerForm.pristine) {
+    @if(userForm.pristine) {
       Pristine
     } @else {
       Dirty
     }
   </span>
 </div>
-<form [formGroup]="registerForm" (ngSubmit)="logForm()">
+<form [formGroup]="userForm" (ngSubmit)="logForm()">
   <label>Firstname:</label>
   <input type="text" name="firstname" formControlName="firstname" >
   <br/>
@@ -34,7 +34,7 @@
   <br/>
   <label>Zip:</label>
   <input type="text" name="zip" formControlName="zip">
-  @if(!registerForm.controls['zip'].pristine && registerForm.controls['zip'].errors) {
+  @if(!userForm.controls['zip'].pristine && userForm.controls['zip'].errors) {
     <div class="alert">
       Zipcode must have 5 digits
     </div>
@@ -45,9 +45,9 @@
   <br/>
   <label>Credit card:</label>
   <input type="password" name="cc" formControlName="cc">
-  @if(registerForm.controls['cc'].errors) {
+  @if(userForm.controls['cc'].errors) {
     <div class="alert">
-      {{registerForm.controls['cc'].errors['creditCard'] }}
+      {{userForm.controls['cc'].errors['creditCard'] }}
     </div>
   }
   <br/>
