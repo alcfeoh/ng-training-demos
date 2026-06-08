@@ -1,8 +1,9 @@
-import {Component, input, model, output} from '@angular/core';
+import {Component, input, model, output, ChangeDetectionStrategy} from '@angular/core';
 
 @Component({
   selector: 'app-dialog',
   templateUrl: './dialog.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./dialog.component.css']
 })
 export class DialogComponent {

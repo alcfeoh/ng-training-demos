@@ -1,4 +1,4 @@
-import {Component, Input, EventEmitter, Output} from '@angular/core';
+import {Component, Input, EventEmitter, Output, ChangeDetectionStrategy} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 
 @Component({
@@ -6,6 +6,7 @@ import {FormsModule} from '@angular/forms';
     imports: [
         FormsModule
     ],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: `
     <input type="text" [(ngModel)]="message">
   `

@@ -1,4 +1,4 @@
-import {Component, signal} from '@angular/core';
+import {Component, signal, ChangeDetectionStrategy} from '@angular/core';
 import {form, FormField, FormRoot, pattern, required} from "@angular/forms/signals";
 import {JsonPipe} from "@angular/common";
 import {validateCreditCardNumber} from "./credit-card-validator";
@@ -11,6 +11,7 @@ import {validateCreditCardNumber} from "./credit-card-validator";
     FormRoot
   ],
   templateUrl: './signal-form.component.html',
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrl: './template-driven-form.component.css',
 })
 export class SignalFormComponent {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import {CountryService} from '../country.service';
 import {Country, countryList$} from '../../countries';
 import {map} from 'rxjs/operators';
@@ -8,6 +8,7 @@ import {map} from 'rxjs/operators';
     selector: 'app-component1',
     templateUrl: './component1.component.html',
     imports: [],
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./component1.component.css']
 })
 export class Component1Component {

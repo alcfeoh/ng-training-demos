@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import {combineLatest, Observable} from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import {ReactiveFormsModule, UntypedFormControl} from '@angular/forms';
@@ -17,6 +17,7 @@ interface State {
     ReactiveFormsModule,
     AsyncPipe
 ],
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./state-filter.component.css']
 })
 export class StateFilterComponent {

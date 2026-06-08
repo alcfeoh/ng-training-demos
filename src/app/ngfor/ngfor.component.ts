@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 
 @Component({
     selector: 'app-ngfor',
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: `
     <ul>
       @for(person of persons; track person._id) {

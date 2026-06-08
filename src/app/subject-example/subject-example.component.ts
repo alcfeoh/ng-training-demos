@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import {Component2Component} from './component2/component2.component';
 import {Component1Component} from './component1/component1.component';
 
@@ -10,6 +10,7 @@ import {Component1Component} from './component1/component1.component';
     Component2Component,
     Component1Component
 ],
+    changeDetection: ChangeDetectionStrategy.Eager,
     templateUrl: './subject-example.component.html'
 })
 export class SubjectExampleComponent {

@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ChangeDetectionStrategy} from '@angular/core';
 import {MessageComponent} from './message.component';
 
 @Component({
@@ -6,6 +6,7 @@ import {MessageComponent} from './message.component';
     imports: [
         MessageComponent
     ],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: `
     <app-message [(message)]="myMessage"></app-message>
     <div>

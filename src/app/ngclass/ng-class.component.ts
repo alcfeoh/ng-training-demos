@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import {NgClass} from '@angular/common';
 
 @Component({
@@ -7,6 +7,7 @@ import {NgClass} from '@angular/common';
     imports: [
         NgClass
     ],
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./ng-class.component.css']
 })
 export class NgClassComponent {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import {FormControl, ReactiveFormsModule} from '@angular/forms';
 
 @Component({
@@ -7,6 +7,7 @@ import {FormControl, ReactiveFormsModule} from '@angular/forms';
     imports: [
         ReactiveFormsModule
     ],
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./observable-subscribe.component.css']
 })
 export class ObservableSubscribeComponent {

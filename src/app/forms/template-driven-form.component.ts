@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {CreditCardValidatorDirective} from './credit-card-validator.directive';
 
@@ -9,6 +9,7 @@ import {CreditCardValidatorDirective} from './credit-card-validator.directive';
         FormsModule,
         CreditCardValidatorDirective
     ],
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['template-driven-form.component.css']
 })
 export class TemplateDrivenFormComponent {

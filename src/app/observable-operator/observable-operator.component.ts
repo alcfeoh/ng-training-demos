@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import {FormControl, ReactiveFormsModule} from '@angular/forms';
 import {map} from 'rxjs/operators';
 
@@ -8,6 +8,7 @@ import {map} from 'rxjs/operators';
     imports: [
         ReactiveFormsModule
     ],
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./observable-operator.component.css']
 })
 export class ObservableOperatorComponent {

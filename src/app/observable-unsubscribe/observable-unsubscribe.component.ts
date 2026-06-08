@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import {FormControl, ReactiveFormsModule} from '@angular/forms';
 import {Subscription} from 'rxjs';
 
@@ -8,6 +8,7 @@ import {Subscription} from 'rxjs';
     imports: [
         ReactiveFormsModule
     ],
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./observable-unsubscribe.component.css']
 })
 export class ObservableUnsubscribeComponent {

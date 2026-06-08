@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, ChangeDetectionStrategy} from '@angular/core';
 import {Country} from '../../countries';
 import {CountryService} from '../country.service';
 
@@ -6,6 +6,7 @@ import {CountryService} from '../country.service';
   selector: 'app-component2',
   templateUrl: './component2.component.html',
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.Eager,
   styleUrls: ['./component2.component.css']
 })
 export class Component2Component  {

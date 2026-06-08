@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import {Observable} from "rxjs";
 
 
 @Component({
     selector: 'app-observable-example',
     imports: [],
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: `
     <ul>
       @for (message of messages; track message) {

@@ -1,7 +1,8 @@
-import {Component, signal} from '@angular/core';
+import {Component, signal, ChangeDetectionStrategy} from '@angular/core';
 
 @Component({
   selector: 'app-signal-examples',
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <h1>Hello {{ name() }}!</h1>
     <button (click)="name.set('WORLD')">

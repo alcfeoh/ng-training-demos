@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 
 @Component({
@@ -6,6 +6,7 @@ import {FormsModule} from '@angular/forms';
     imports: [
         FormsModule
     ],
+    changeDetection: ChangeDetectionStrategy.Eager,
     templateUrl: 'model.component.html'
 })
 export class ModelComponent {

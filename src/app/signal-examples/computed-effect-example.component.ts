@@ -1,7 +1,8 @@
-import {Component, computed, effect, signal} from '@angular/core';
+import {Component, computed, effect, signal, ChangeDetectionStrategy} from '@angular/core';
 
 @Component({
   selector: 'app-computed-effect-example',
+  changeDetection: ChangeDetectionStrategy.Eager,
   template: `
     <h1>{{message()}}</h1>
     <button (click)="name.set('WORLD')">

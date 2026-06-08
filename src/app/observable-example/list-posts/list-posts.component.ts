@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ChangeDetectionStrategy} from '@angular/core';
 import {Post} from './post';
 import {PostsService} from './posts.service';
 import {map} from 'rxjs/operators';
@@ -10,6 +10,7 @@ import { TitleCasePipe } from '@angular/common';
     imports: [
     TitleCasePipe
 ],
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./list-posts.component.css']
 })
 export class ListPostsComponent {

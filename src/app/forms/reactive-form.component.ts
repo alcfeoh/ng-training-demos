@@ -1,4 +1,4 @@
-import {Component, inject, OnInit} from '@angular/core';
+import {Component, inject, OnInit, ChangeDetectionStrategy} from '@angular/core';
 import {
   ReactiveFormsModule,
   UntypedFormBuilder,
@@ -13,6 +13,7 @@ import {CreditCardValidatorDirective} from './credit-card-validator.directive';
     imports: [
         ReactiveFormsModule
     ],
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['template-driven-form.component.css']
 })
 export class ReactiveFormComponent implements OnInit {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 import {FormControl, ReactiveFormsModule} from '@angular/forms';
 import {tap, withLatestFrom} from 'rxjs/operators';
 import {Country, countryList$} from '../countries';
@@ -11,6 +11,7 @@ import {combineLatest} from 'rxjs';
     imports: [
     ReactiveFormsModule
 ],
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./observable-operators.component.css']
 })
 export class ObservableOperatorsComponent {

@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 
 @Component({
     selector: 'app-ngswitch',
+    changeDetection: ChangeDetectionStrategy.Eager,
     template: `
     <div>
       @switch (page) {

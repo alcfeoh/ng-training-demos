@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import {DialogComponent} from '../dialog/dialog.component';
 import {RouterLink} from '@angular/router';
 
@@ -8,6 +8,7 @@ import {RouterLink} from '@angular/router';
     imports: [
         DialogComponent, RouterLink
     ],
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
