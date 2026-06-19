@@ -1,0 +1,37 @@
+.child-box {
+  border: 1px solid #4caf50;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #e8f5e9;
+}
+
+.state-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.pop-value {
+  display: inline-block;
+  animation: popValue 0.8s ease-out;
+  font-weight: bold;
+}
+
+@keyframes popValue {
+  0% {
+    transform: scale(1);
+    color: inherit;
+  }
+
+  30% {
+    transform: scale(1.8);
+    color: gold;
+  }
+
+  100% {
+    transform: scale(1);
+    color: inherit;
+  }
+}

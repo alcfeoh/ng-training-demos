@@ -1,0 +1,11 @@
+<h3>State Management Example (Global vs Local vs Component)</h3>
+
+<button (click)="addParent()">Add another Parent Component</button> &nbsp;
+<button (click)="removeParents()">Remove all Parents</button>
+<br><br>
+
+<div style="display: flex; gap: 20px; flex-wrap: wrap;">
+  @for (parent of parents(); track parent) {
+    <app-parent-state [index]="parent"></app-parent-state>
+  }
+</div>

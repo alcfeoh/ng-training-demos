@@ -1,0 +1,41 @@
+<div class="parent-box">
+  <h4>Parent #{{ index() }} (Provides LocalService)</h4>
+
+  <div style="margin-bottom: 15px; padding: 10px; background-color: #bbdefb; border-radius: 4px;">
+    <div class="state-row">
+      <span><strong>Root Provider</strong> = 
+        @for (v of [globalStateService.counter()]; track v) {
+          <span class="pop-value">{{ v }}</span>
+        }
+      </span>
+      <button (click)="globalStateService.increment()">+1</button>
+    </div>
+    
+    <div class="state-row">
+      <span><strong>Local Provider (in Parent)</strong> = 
+        @for (v of [localStateService.counter()]; track v) {
+          <span class="pop-value">{{ v }}</span>
+        }
+      </span>
+      <button (click)="localStateService.increment()">+1</button>
+    </div>
+    
+    <div class="state-row">
+      <span><strong>Component State</strong> = 
+        @for (v of [componentStateCounter()]; track v) {
+          <span class="pop-value">{{ v }}</span>
+        }
+      </span>
+      <button (click)="incrementComponentState()">+1</button>
+    </div>
+  </div>
+
+  <button (click)="addChild()">Add Child</button>
+  <br><br>
+  
+  <div style="display: flex; gap: 10px; flex-direction: column;">
+    @for (child of children(); track child) {
+      <app-child-state [index]="child"></app-child-state>
+    }
+  </div>
+</div>

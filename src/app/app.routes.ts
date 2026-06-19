@@ -26,7 +26,7 @@ import { TabsComponent } from './tabs/tabs.component';
 import { Tab1Component } from './tabs/tab1.component';
 import { Tab2Component } from './tabs/tab2.component';
 import { Tab3Component } from './tabs/tab3.component';
-
+import { StateExampleComponent } from './state-example/state-example.component';
 
 export const routes: Routes = [
   {
@@ -84,5 +84,7 @@ export const routes: Routes = [
     path: 'spinner', component: WrapperComponent
   }, {
     path: 'state-filter', component: StateFilterComponent
+  }, {
+    path: 'state-example', component: StateExampleComponent
   }
 ];
